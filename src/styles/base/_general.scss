@@ -1,0 +1,29 @@
+.container {
+    width: $container + $gap * 2;
+    max-width: 100%;
+    padding: 0 $gap;
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.grid {
+    display: grid;
+}
+
+.section {
+    padding-bottom: 200px;
+
+    @media(max-width: 1200px) {
+        padding-bottom: 100px;
+    }
+
+    @media(max-width: 575px) {
+        padding-bottom: 50px;
+    }
+}
+
+@import '../components/components';

@@ -1,0 +1,21 @@
+@mixin round($size, $bg) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: $bg;
+}
+
+@mixin list-num($counter-name, $top, $left, $fw, $lh, $width) {
+    content: counter($counter-name);
+    counter-increment: $counter-name;
+    position: absolute;
+    top: $top;
+    left: $left;
+    font-weight: $fw;
+    font-size: 150px;
+    line-height: $lh;
+    letter-spacing: -0.02em;
+    color: transparent;
+    -webkit-text-stroke: $width #FA1100;
+    text-stroke: $width #FA1100;
+}

@@ -1,0 +1,46 @@
+.welcome {
+    padding-top: 150px;
+
+    @media(max-width: 1200px) {
+        padding-top: 100px;
+    }
+
+    @media(max-width: 575px) {
+        padding-top: 50px;
+    }
+
+    // .welcome__title
+
+    &__title {
+        max-width: 895px;
+        margin: 0 auto 77px;
+
+        @media(max-width: 991px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    // .welcome__inner
+
+    &__inner {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+
+        @media(max-width: 991px) {
+            grid-template-columns: 100%;
+        }
+    }
+
+    // .welcome__col
+
+    &__col {
+        p {
+            @extend %text-21;
+
+            span {
+                font-weight: 700;
+                color: $main-red;
+            }
+        }
+    }
+}

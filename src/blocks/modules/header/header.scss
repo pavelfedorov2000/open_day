@@ -1,0 +1,20 @@
+.header {
+    position: absolute;
+    top: 33px;
+    left: 0;
+    right: 0;
+    z-index: 200;
+
+    @media(max-width: 991px) {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        background-color: #181818;
+        padding: 15px 0;
+    }
+
+    &__inner {
+        @extend %flex-row;
+        align-items: center;
+    }
+}

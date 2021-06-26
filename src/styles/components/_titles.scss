@@ -1,0 +1,44 @@
+.title {
+    font-weight: 700;
+}
+
+.section-title {
+    font-size: 35px;
+    line-height: 48 / 35 * 100%;
+    color: #000000;
+    text-align: center;
+
+    @media(max-width: 991px) {
+        font-size: 32px;
+    }
+
+    @media(max-width: 575px) {
+        font-size: 27px;
+    }
+
+    @media(max-width: 374px) {
+        font-size: 25px;
+    }
+
+    &--bigger {
+        font-size: 45px;
+        line-height: 61 / 45 * 100%;
+
+        @media(max-width: 991px) {
+            font-size: 42px;
+        }
+
+        @media(max-width: 575px) {
+            font-size: 27px;
+        }
+
+        @media(max-width: 374px) {
+            font-size: 25px;
+        }
+    }
+
+    span {
+        display: block;
+        color: #FA1100;
+    }
+}

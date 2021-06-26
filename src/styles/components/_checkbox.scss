@@ -1,0 +1,34 @@
+.check-box {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+.check-style {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $gray;
+    border-radius: 4px;
+
+    //margin-left: -30px;
+}
+
+.check-label {
+    padding-left: 45px;
+}
+
+.check-box:checked+.check-style {
+    border-color: #000;
+
+    &:before {
+        content: '';
+        position: absolute;
+        @extend %pos-center-xy;
+        width: 16px;
+        height: 15px;
+        background-image: url(../img/icons/checkbox.svg);
+    }
+}

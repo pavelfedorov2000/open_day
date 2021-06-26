@@ -1,0 +1,99 @@
+.newsletter {
+
+    padding-top: 166px;
+    padding-top: 397px;
+    text-align: center;
+    position: relative;
+
+    @media(max-width: 1200px) {
+        padding-top: 300px;
+    }
+
+    @media(max-width: 991px) {
+        padding-top: 200px;
+    }
+
+    @media(max-width: 767px) {
+        padding-top: 150px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        @extend %pos-center-x;
+        z-index: -1;
+        width: 100%;
+        height: calc(100% + 200px);
+        background-image: url(../img/bg/buzz-bg.png);
+    }
+
+    &__inner {
+        position: relative;
+        max-width: 855px;
+        margin: 0 auto;
+
+        &:before {
+            content: 'the buzz';
+            position: absolute;
+            top: -231px;
+            @extend %pos-center-x;
+            z-index: -1;
+            font-family: 'Roboto',
+                sans-serif;
+            font-size: 330px;
+            line-height: 387 / 330 * 100%;
+            font-style: italic;
+            text-transform: uppercase;
+            color: rgba(232, 7, 0, 0.4);
+            white-space: nowrap;
+
+            @media(max-width: 1450px) {
+                font-size: 250px;
+                top: -170px;
+            }
+
+            @media(max-width: 1200px) {
+                font-size: 200px;
+                top: -120px;
+            }
+
+            @media(max-width: 991px) {
+                font-size: 150px;
+                top: -80px;
+            }
+
+            @media(max-width: 767px) {
+                font-size: 65px;
+            }
+        }
+    }
+
+    // .newsletter__title
+
+    &__title {
+        margin-bottom: 30px;
+
+        span {
+            position: relative;
+            display: inline-block;
+            color: #000;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 2px;
+                @extend %pos-center-y;
+                width: 17px;
+                height: 6px;
+                background-color: $main-red;
+            }
+        }
+    }
+
+    // .newsletter__action-text
+
+    &__action-text {
+        @extend %text-21;
+    }
+}
